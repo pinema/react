@@ -2,17 +2,28 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-class Square extends React.Component {
-    render() {
-      return (
-        // <button className="square" onClick={function(){alert('click')}}>
+// class Square extends React.Component {
+//     render() {
+//       return (
+//         // <button className="square" onClick={function(){alert('click')}}>
+//         <button
+//           className="square"
+//           onClick={() => this.props.onClickasd()}>
+//           {this.props.propsIndex}
+//         </button>
+//       );
+//     }
+// }
+
+// 函数组件
+function Square(props) {
+    return (
         <button
-          className="square"
-          onClick={() => this.props.onClickasd()}>
-          {this.props.propsIndex}
+            className="square"
+            onClick={props.onClickasd}>
+            {props.propsIndex}
         </button>
-      );
-    }
+    );
 }
 
 class Board extends React.Component {
